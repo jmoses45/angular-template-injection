@@ -1,0 +1,13 @@
+<hello name="{{ name }}"></hello>
+<app-card-list [template]="accountTemplate"> </app-card-list>
+<app-card-list [template]="conditionerTemplate"> </app-card-list>
+
+<ng-template #accountTemplate>
+  <app-account-card [accounts]="accountData"></app-account-card>
+</ng-template>
+
+<ng-template #conditionerTemplate>
+  <div *ngFor="let conditioner of conditionerData">
+    <app-conditioner-card [conditioner]="conditioner"></app-conditioner-card>
+  </div>
+</ng-template>
